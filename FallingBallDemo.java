@@ -8,6 +8,10 @@ import javax.swing.event.*;
 /**
    A program to demonstrate a simple animation of a ball that falls to
    the ground after being released from somewhere.
+   
+   IMPORTANT NOTE: Thread safety is not ensured!  We will get to that
+   soon.  Concurrency adds complications that we have not yet seen how
+   to handle!
 
    @author Jim Teresco
    @version Spring 2020
