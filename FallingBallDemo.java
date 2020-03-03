@@ -52,17 +52,17 @@ public class FallingBallDemo extends MouseAdapter implements Runnable {
 		    // overriding in JPanel
 		    super.paintComponent(g);
 
-		    // redraw each ball at its current position, in reverse
-		    // so we can remove the ones that are done
-		    int i = list.size() - 1;
-		    while (i >= 0 && !list.isEmpty()) {
+		    // redraw each ball at its current position,
+		    // remove the ones that are done along the way
+		    int i = 0;
+		    while (i < list.size()) {
 			FallingBall b = list.get(i);
 			if (b.done()) {
 			    list.remove(i);
 			}
 			else {
 			    b.paint(g);
-			    i--;
+			    i++;
 			}
 		    }
 		}
